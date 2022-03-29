@@ -1,6 +1,6 @@
 // JASKIS
 // paste the MongoDB commands you use underneath each prompt
-
+let j = 1 + 1
 // GETTING STARTED
 // 1. Create a database called jaskis
 

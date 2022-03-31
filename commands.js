@@ -10,7 +10,7 @@ db.createCollection('bounties')
 
 // ADD THE ANIMAL BOUNTIES
 // 1. Insert the given "Thanoceros" bounty object
-db.bounties.insertone({
+db.bounties.insertOne({
     name: "Thanoceros",
     species: "Rhinoceros",
     location: "Grasslands",
@@ -23,7 +23,7 @@ db.bounties.insertone({
 // 2. Query for all bounties in the bounties collection
   db.bounties.find()
 // 3. Insert many bounties at once using the given objects
-db.bounties.insertmany([
+db.bounties.insertMany([
     {
       "name": "Lokinkajou",
       "species": "Kinkajou",
@@ -95,6 +95,6 @@ db.bounties.update({"name": "Polarwind"}, {"$set": {"reward": 10000}})
 // 2. Remove Lokinkajou
 db.bounties.remove({"name": "Lokinkajou"})
 // 3. Delete all bounties sent by Songbird
-db.bounties.deletemany({"client": "Songbird"})
+db.bounties.deleteMany({"client": "Songbird"})
 // 4. Update all captured statuses to true
-db.bounties.updateMany({}, {"$Set": {"captured": true}})
+db.bounties.updateMany({}, {"$set": {"captured": true}})
